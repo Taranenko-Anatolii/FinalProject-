@@ -1,0 +1,426 @@
+@import "../mixins";
+@import "../constants";
+
+/* ================ START OF ADAPTIVE 768px ==================== */
+@media screen and (max-width: 768px) {
+  /* ================ START OF MAIN PAGE ==================== */
+
+  main {
+    @include flexBox(column, center, center);
+  }
+
+  .aboutUsContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+    gap: 20px;
+    .aboutUsInfoContainer {
+      width: $width100;
+      gap: 20px;
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: $fzSmall;
+        line-height: $lineHeight;
+      }
+
+      a {
+        display: none;
+      }
+    }
+
+    .aboutUsImgContainer {
+      img {
+        width: 240px;
+      }
+    }
+
+  }
+
+  /* ================ END OF MAIN PAGE ==================== */
+
+
+
+  /* ======= EVENTS CONTAINER START ======= */
+  .eventsContainer {
+    width: $width100;
+
+    .leftEventContainer {
+      h3 {
+        font-size: 2.0rem;
+      }
+
+      button {
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .seeAllEventsContainer {
+      display: none;
+    }
+  }
+
+
+  /* ======= EVENTS CONTAINER END ======= */
+
+  /* ======= NEAR EVENTS CONTAINER START ======= */
+  .nearEventsContainer {
+    @include flexBox(column, center, normal);
+
+    hr {
+      display: initial;
+      width: $width100;
+      border: 1px solid #D9D9D9;
+    }
+
+    div {
+      @include flexBox(row, normal, normal);
+      max-width: 100%;
+      gap: 20px;
+
+      img {
+        width: 160px;
+        height: 100px;
+      }
+
+      .eventInfoContainer {
+        @include flexBox(column, center, start);
+
+        h4 {
+          color: #7C6F50;
+        }
+      }
+    }
+  }
+  /* ======= NEAR EVENTS CONTAINER END ======= */
+
+  /* ======= UPCOMING EVENTS CONTAINER START ======= */
+  .upcomingEventsContainer {
+    @include flexBox(column, center, normal);
+
+    hr {
+      display: initial;
+      width: $width100;
+      border: 1px solid #D9D9D9;
+    }
+
+    div {
+      @include flexBox(row, normal, normal);
+      max-width: 100%;
+      gap: 20px;
+
+      img {
+        width: 160px;
+        height: 100px;
+      }
+
+      .eventInfoContainer {
+        @include flexBox(column, center, start);
+
+        h4 {
+          color: #7C6F50;
+        }
+      }
+    }
+  }
+  /* ======= UPCOMING EVENTS CONTAINER END ======= */
+
+
+
+  /* ======= JOIN CONTAINER START ======= */
+  .joinContainer {
+    @include flexBox(column, center, center);
+    gap: 6px;
+
+    h2 {
+      align-self: flex-start;
+    }
+
+    p {
+      line-height: $lineHeight;
+    }
+
+    a {
+      margin-top: 16px;
+    }
+
+  }
+  /* ======= JOIN CONTAINER END ======= */
+
+
+
+  /* ======= HOW MEET WORKS CONTAINER START ======= */
+
+  .howMeetWorksContainer {
+    h2 {
+      font-size: 2.0rem;
+    }
+  }
+
+  .howMeetWorksList {
+    @include flexBox(column, center, center);
+    gap: 12px;
+    ////flex-wrap: wrap;
+    .howMeetWorksSubContainer {
+      width: $width100;
+    }
+
+  }
+
+  /* ======= HOW MEET WORKS CONTAINER END ======= */
+
+}
+/* ================ END OF ADAPTIVE 768px ==================== */
+
+/* ================ START OF ADAPTIVE 426px ==================== */
+@media screen and (max-width: 426px) {
+
+  main {
+    padding: 0 15px 0 15px;
+  }
+
+  /* ======= NEAR EVENTS CONTAINER START ======= */
+  .nearEventsContainer {
+    @include flexBox(column, center, normal);
+
+    hr {
+      display: initial;
+      width: $width100;
+      border: 1px solid #D9D9D9;
+    }
+
+    div {
+      @include flexBox(row, normal, normal);
+      max-width: 100%;
+      gap: 20px;
+
+      img {
+        width: 130px;
+        height: 70px;
+      }
+
+      .eventInfoContainer {
+        @include flexBox(column, center, start);
+
+        h4 {
+         font-size: 1.0rem;
+        }
+
+        p {
+          font-size: 1.0rem;
+        }
+
+        .additionEventInfoContainer {
+
+          .membersWaitingInfo {
+            font-size: 1.0rem;
+          }
+
+          .paidInfo {
+            font-size: 1.0rem;
+          }
+        }
+      }
+    }
+  }
+  /* ======= NEAR EVENTS CONTAINER END ======= */
+
+  /* ======= UPCOMING EVENTS CONTAINER START ======= */
+  .upcomingEventsContainer {
+    @include flexBox(column, center, normal);
+
+    hr {
+      display: initial;
+      width: $width100;
+      border: 1px solid #D9D9D9;
+    }
+
+    div {
+      @include flexBox(row, normal, normal);
+      max-width: 100%;
+      gap: 20px;
+
+      img {
+        width: 130px;
+        height: 70px;
+      }
+
+      .eventInfoContainer {
+        @include flexBox(column, center, start);
+
+        h4 {
+          font-size: 1.0rem;
+        }
+
+        p {
+          font-size: 1.0rem;
+        }
+
+        .additionEventInfoContainer {
+
+          .membersWaitingInfo {
+            font-size: 1.0rem;
+          }
+
+          .paidInfo {
+            font-size: 1.0rem;
+
+          }
+        }
+      }
+    }
+  }
+  /* ======= UPCOMING EVENTS CONTAINER END ======= */
+
+
+
+
+  /* ======= JOIN CONTAINER START ======= */
+  .joinContainer {
+    padding: 16px 15px;
+
+    h2 {
+      font-size: 2.0rem;
+    }
+
+    #joinImg {
+      width: 240px;
+    }
+
+    p {
+      font-size: $fzSmall;
+    }
+  }
+  /* ======= JOIN CONTAINER END ======= */
+
+
+
+  /* ======= TOP CATEGORIES CONTAINER START ======= */
+
+  .topCategoriesContainer {
+    h2 {
+      font-size: 2.0rem;
+    }
+  }
+
+
+  /* ======= TOP CATEGORIES CONTAINER END ======= */
+
+
+
+  /* ======= POPULAR CITIES CONTAINER START ======= */
+  .popularCitiesContainer {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    h2 {
+      margin-bottom: 10px;
+      font-size: 2.0rem;
+    }
+
+    p {
+      font-size: $fzSmall;
+    }
+  }
+
+  .popularCitiesList {
+    gap: 18px;
+    div {
+      width: 155px;
+
+      img {
+        width: $width100;
+      }
+    }
+  }
+  /* ======= POPULAR CITIES CONTAINER END ======= */
+
+
+
+  /* ======= HOW MEET WORKS CONTAINER START ======= */
+
+  .howMeetWorksContainer {
+
+    h2 {
+      margin-bottom: 18px;
+    }
+
+  }
+
+  .howMeetWorksList {
+    @include flexBox(column, center, center);
+    gap: 12px;
+    .howMeetWorksSubContainer {
+      width: $width100;
+      gap: 12px;
+    }
+
+    .howMeetWorksImgContainer {
+      img {
+        width: 25px;
+      }
+    }
+
+    .howMeetWorksInfoContainer {
+      h4 {
+        font-size: $fzSmall;
+      }
+
+      p {
+        font-size: 1.0rem;
+      }
+
+      a {
+        font-size: 1.0rem;
+      }
+    }
+
+  }
+
+  /* ======= HOW MEET WORKS CONTAINER END ======= */
+
+
+
+  /* ======= FRIENDSHIPS MEET CONTAINER START ======= */
+
+  .friendshipsMeetContainer {
+    width: $width100;
+    margin-top: 40px;
+    margin-bottom: 24px;
+
+    h2 {
+      font-size: 2.0rem;
+    }
+
+    .friendshipsDesc {
+      display: none;
+    }
+  }
+
+  .friendshipsFeaturesList {
+    @include flexBox(row, center, normal);
+    flex-wrap: wrap;
+    gap: 32px;
+
+    margin-top: 24px;
+    div {
+      h4 {
+        font-size: $fzMedium;
+      }
+
+      p {
+        font-size: $fzSmall;
+      }
+
+      a {
+        font-size: $fzSmall;
+      }
+    }
+  }
+
+  /* ======= FRIENDSHIPS MEET CONTAINER END ======= */
+}
+/* ================ END OF ADAPTIVE 426px ==================== */

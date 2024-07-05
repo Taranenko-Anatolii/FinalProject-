@@ -1,0 +1,489 @@
+@import "../mixins";
+@import "../universalStyles";
+@import "../constants";
+
+/* ================ START OF MAIN ==================== */
+main {
+  @include flexBox(column, center, center);
+  padding: 0 10% 0 10%;
+  margin-top: 46px;
+  gap: 40px;
+}
+
+
+/* ======= ABOUT US CONTAINER START ======= */
+.aboutUsContainer {
+  @include flexBox(row, space-between, center);
+  width: $width100;
+  margin-bottom: 80px;
+  gap: 45px;
+
+  .aboutUsInfoContainer {
+    @include flexBox(column, center, start);
+    width: 50%;
+    gap: 24px;
+    h1 {
+      font-size: 4.2rem;
+    }
+
+    p {
+      font-size: $fzMedium;
+      line-height: $lineHeight;
+    }
+
+    a {
+      background-color: $aquaBlueBg;
+      padding: 8px 16px;
+      border-radius: $borderRadius8x;
+
+      font-size: $fzMedium;
+      color: $whiteFont;
+      text-decoration: none;
+      text-align: center;
+
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: #02b5d0;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .aboutUsImgContainer {
+    img {
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+/* ======= ABOUT US CONTAINER END ======= */
+
+
+/* ======= EVENTS CONTAINER START ======= */
+.eventsContainer {
+  @include flexBox(row, space-between, center);
+  width: $width100;
+  margin-top: 24px;
+
+  .leftEventContainer {
+    @include flexBox(row, space-between, center);
+    gap: 25px;
+
+    h3 {
+      font-size: $fzBig28;
+    }
+
+    button {
+      @include flexBox(row, center, center);
+      background-color: #97CAD11F;
+      padding: 12px 12px 8px 12px;
+      gap: 8px;
+      border: none;
+      border-radius: $borderRadius8x;
+
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      span {
+        font-size: $fzMedium2;
+        color: $aquaBlueFont;
+      }
+    }
+  }
+
+  .seeAllEventsContainer {
+    a {
+      font-size: $fzMedium;
+      color: $aquaBlueFont;
+      text-decoration: none;
+
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: #02b5d0;
+      }
+    }
+  }
+}
+/* ======= EVENTS CONTAINER END ======= */
+
+
+/* ======= NEAR EVENTS CONTAINER START ======= */
+.nearEvents {
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+
+.nearEventsContainer {
+  @include flexBox(row, space-between, normal);
+  width: $width100;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  gap: 36px;
+
+  div {
+    max-width: 272px;
+    max-height: 400px;
+    padding-bottom: 10px;
+  }
+
+  .eventCard {
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  hr {
+    display: none;
+  }
+
+  .eventInfoContainer {
+    @include flexBox(column, center, start);
+    gap: 10px;
+    h4 {
+      font-size: $fzMedium2;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $darkGrayFont;
+    }
+
+    .eventLocationInfo {
+      color: $grayFont;
+    }
+
+    .eventDateInfo:before {
+      content: url("/assets/mainPage/main/calendar_icon.svg");
+      @include iconInlineAlign();
+    }
+
+    .additionEventInfoContainer {
+      @include flexBox(row, start, center);
+      gap: 16px;
+
+      .membersWaitingInfo {
+        font-size: $fzMedium;
+
+        &:before {
+          content: url("/assets/mainPage/main/check_icon.svg");
+           @include iconInlineAlign();
+        }
+      }
+
+      .paidInfo {
+        font-size: $fzMedium;
+
+        &:before {
+          content: url("/assets/mainPage/main/ticket_icon.svg");
+           @include iconInlineAlign();
+        }
+      }
+    }
+  }
+}
+/* ======= NEAR EVENTS CONTAINER END ======= */
+
+/* ======= UPCOMING EVENTS CONTAINER START ======= */
+.upcomingEvents {
+  margin-bottom: 24px;
+}
+
+.upcomingEventsContainer {
+  @extend .nearEventsContainer;
+}
+/* ======= UPCOMING EVENTS CONTAINER END ======= */
+
+/* ======= JOIN CONTAINER START ======= */
+.joinContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;//Колонки( вверх/вниз)
+  width: $width100;
+  background-color: #97CAD114;
+  padding: 16px 56px;
+  border-radius: $borderRadius8x;
+  column-gap: 20px;
+  //margin-bottom: 64px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  #joinImg {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: end;
+  }
+
+  h2 {
+    font-size: $fzBig28;
+  }
+
+  p {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    font-size: $fzMedium;
+    line-height: $lineHeight;
+  }
+
+  a {
+    width: 192px;
+    height: 40px;
+    background-color: #E32359;
+    border: none;
+    border-radius: $borderRadius8x;
+    padding: 8px 66px;
+
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    font-size: $fzMedium;
+    color: $whiteFont;
+    text-decoration: none;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: #ff004d;
+      transform: scale(1.05);
+    }
+  }
+}
+/* ======= JOIN CONTAINER END ======= */
+
+
+/* ======= TOP CATEGORIES CONTAINER START ======= */
+.topCategoriesContainer {
+  width: $width100;
+  margin-top: $marginT;
+  margin-bottom: $marginB;
+  h2 {
+    margin-bottom: 24px;
+    font-size: $fzBig28;
+  }
+}
+
+.topCategoriesList {
+  @include flexBox(row, center, normal);
+  flex-wrap: wrap;
+  gap: 16px;
+
+  div {
+    @include flexBox(column, center, center);
+    width: 135px;
+    height: 112px;
+    background-color: #97CAD114;
+    border-radius: $borderRadius8x;
+    padding: 16px;
+    gap: 6px;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    p {
+      font-size: $fzMedium;
+      text-align: center;
+    }
+  }
+}
+/* ======= TOP CATEGORIES CONTAINER END ======= */
+
+
+
+/* ======= POPULAR CITIES CONTAINER START ======= */
+.popularCitiesContainer {
+  width: $width100;
+  margin-top: $marginT;
+  //margin-bottom: $marginB;
+  h2 {
+    margin-bottom: 24px;
+    font-size: $fzBig28;
+  }
+
+  p {
+    font-size: $fzMedium;
+    color: $grayFont;
+  }
+}
+
+.popularCitiesList {
+  @include flexBox(row, center, normal);
+  flex-wrap: wrap;
+  gap: 42px;
+  margin-top: 28px;
+  //margin-bottom: 40px;
+  div {
+    @include flexBox(column, center, center);
+    gap: 24px;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    p {
+      font-size: $fzMedium2;
+      text-align: center;
+    }
+  }
+}
+/* ======= POPULAR CITIES CONTAINER END ======= */
+
+
+
+/* ======= HOW MEET WORKS CONTAINER START ======= */
+.howMeetWorksContainer {
+  width: $width100;
+  margin-top: $marginT;
+  //margin-bottom: 40px;
+  h2 {
+    margin-bottom: 24px;
+    font-size: $fzBig28;
+  }
+
+}
+
+.howMeetWorksList {
+  @include flexBox(row, space-between, center);
+  gap: 32px;
+  .howMeetWorksSubContainer {
+    @include flexBox(row, start, start);
+    background-color: #97CAD114;
+    width: 580px;
+    border-radius: $borderRadius8x;
+    padding: 32px 24px;
+    gap: 24px;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .howMeetWorksImgContainer {
+    @include flexBox(column, start, start);
+  }
+
+  .howMeetWorksInfoContainer {
+    @include flexBox(column, start, start);
+    max-width: 380px;
+    gap: 16px;
+    h4 {
+      font-size: $fzMedium2;
+    }
+
+    p {
+      font-size: $fzMedium;
+    }
+
+    a {
+      font-size: $fzMedium;
+      color: $aquaBlueFont;
+      text-decoration: none;
+
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: #02b5d0;
+      }
+    }
+  }
+}
+/* ======= HOW MEET WORKS CONTAINER END ======= */
+
+
+
+
+/* ======= FRIENDSHIPS MEET CONTAINER START ======= */
+.friendshipsMeetContainer {
+  width: $width100;
+  margin-top: $marginT;
+  margin-bottom: $marginB;
+
+  h2 {
+    font-size: $fzBig28;
+  }
+
+  p {
+    font-size: $fzMedium;
+    color: $grayFont;
+    line-height: $lineHeight;
+  }
+
+  .friendshipsDesc {
+    max-width: 895px;
+    margin-bottom: 28px;
+  }
+}
+
+.friendshipsFeaturesList {
+  @include flexBox(row, center, normal);
+  flex-wrap: wrap;
+  margin-bottom: $marginB;
+  gap: 32px;
+
+  div {
+    @include flexBox(column, start, start);
+    max-width: 376px;
+    gap: 12px;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    h4 {
+      font-size: 1.8rem;
+      color: $darkGrayFont;
+    }
+
+    p {
+      font-size: $fzMedium;
+      line-height: $lineHeight;
+    }
+
+    a {
+      margin-top: 4px;
+
+      font-size: $fzMedium;
+      color: $aquaBlueFont;
+      text-decoration: none;
+
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: #02b5d0;
+      }
+    }
+  }
+}
+/* ======= FRIENDSHIPS MEET CONTAINER END ======= */
+
+/* ================ END OF MAIN ==================== */

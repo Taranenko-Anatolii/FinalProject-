@@ -1,0 +1,480 @@
+.text500 {
+  font-weight: 500;
+}
+
+.text600 {
+  font-weight: 600;
+}
+
+.text700 {
+  font-weight: 700;
+}
+
+.text800 {
+  font-weight: 800;
+}
+
+.text900 {
+  font-weight: 900;
+}
+
+/* ================ START OF MAIN ==================== */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10% 0 10%;
+  margin-top: 46px;
+  gap: 40px;
+}
+
+/* ======= ABOUT US CONTAINER START ======= */
+.aboutUsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 80px;
+  gap: 45px;
+}
+.aboutUsContainer .aboutUsInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+  gap: 24px;
+}
+.aboutUsContainer .aboutUsInfoContainer h1 {
+  font-size: 4.2rem;
+}
+.aboutUsContainer .aboutUsInfoContainer p {
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+.aboutUsContainer .aboutUsInfoContainer a {
+  background-color: #00798a;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.aboutUsContainer .aboutUsInfoContainer a:hover {
+  background-color: #02b5d0;
+  transform: scale(1.1);
+}
+.aboutUsContainer .aboutUsImgContainer img {
+  transition: all 0.5s ease;
+}
+.aboutUsContainer .aboutUsImgContainer img:hover {
+  transform: scale(1.1);
+}
+
+/* ======= ABOUT US CONTAINER END ======= */
+/* ======= EVENTS CONTAINER START ======= */
+.eventsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+}
+.eventsContainer .leftEventContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.eventsContainer .leftEventContainer h3 {
+  font-size: 2.8rem;
+}
+.eventsContainer .leftEventContainer button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(151, 202, 209, 0.1215686275);
+  padding: 12px 12px 8px 12px;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.eventsContainer .leftEventContainer button:hover {
+  transform: scale(1.1);
+}
+.eventsContainer .leftEventContainer button span {
+  font-size: 2rem;
+  color: #00798a;
+}
+.eventsContainer .seeAllEventsContainer a {
+  font-size: 1.6rem;
+  color: #00798a;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.eventsContainer .seeAllEventsContainer a:hover {
+  color: #02b5d0;
+}
+
+/* ======= EVENTS CONTAINER END ======= */
+/* ======= NEAR EVENTS CONTAINER START ======= */
+.nearEvents {
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+
+.nearEventsContainer, .upcomingEventsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  gap: 36px;
+}
+.nearEventsContainer div, .upcomingEventsContainer div {
+  max-width: 272px;
+  max-height: 400px;
+  padding-bottom: 10px;
+}
+.nearEventsContainer .eventCard, .upcomingEventsContainer .eventCard {
+  transition: all 0.5s ease;
+}
+.nearEventsContainer .eventCard:hover, .upcomingEventsContainer .eventCard:hover {
+  transform: scale(1.1);
+}
+.nearEventsContainer hr, .upcomingEventsContainer hr {
+  display: none;
+}
+.nearEventsContainer .eventInfoContainer, .upcomingEventsContainer .eventInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+.nearEventsContainer .eventInfoContainer h4, .upcomingEventsContainer .eventInfoContainer h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.nearEventsContainer .eventInfoContainer p, .upcomingEventsContainer .eventInfoContainer p {
+  font-size: 1.4rem;
+  color: #212121;
+}
+.nearEventsContainer .eventInfoContainer .eventLocationInfo, .upcomingEventsContainer .eventInfoContainer .eventLocationInfo {
+  color: #707070;
+}
+.nearEventsContainer .eventInfoContainer .eventDateInfo:before, .upcomingEventsContainer .eventInfoContainer .eventDateInfo:before {
+  content: url("/assets/mainPage/main/calendar_icon.svg");
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo {
+  font-size: 1.6rem;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo:before, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer .membersWaitingInfo:before {
+  content: url("/assets/mainPage/main/check_icon.svg");
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo {
+  font-size: 1.6rem;
+}
+.nearEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo:before, .upcomingEventsContainer .eventInfoContainer .additionEventInfoContainer .paidInfo:before {
+  content: url("/assets/mainPage/main/ticket_icon.svg");
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* ======= NEAR EVENTS CONTAINER END ======= */
+/* ======= UPCOMING EVENTS CONTAINER START ======= */
+.upcomingEvents {
+  margin-bottom: 24px;
+}
+
+/* ======= UPCOMING EVENTS CONTAINER END ======= */
+/* ======= JOIN CONTAINER START ======= */
+.joinContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+  padding: 16px 56px;
+  border-radius: 8px;
+  column-gap: 20px;
+  transition: all 0.5s ease;
+}
+.joinContainer:hover {
+  transform: scale(1.05);
+}
+.joinContainer #joinImg {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  align-self: center;
+  justify-self: end;
+}
+.joinContainer h2 {
+  font-size: 2.8rem;
+}
+.joinContainer p {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+.joinContainer a {
+  width: 192px;
+  height: 40px;
+  background-color: #E32359;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 66px;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.joinContainer a:hover {
+  background-color: #ff004d;
+  transform: scale(1.05);
+}
+
+/* ======= JOIN CONTAINER END ======= */
+/* ======= TOP CATEGORIES CONTAINER START ======= */
+.topCategoriesContainer {
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.topCategoriesContainer h2 {
+  margin-bottom: 24px;
+  font-size: 2.8rem;
+}
+
+.topCategoriesList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.topCategoriesList div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 112px;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+  border-radius: 8px;
+  padding: 16px;
+  gap: 6px;
+  transition: all 0.5s ease;
+}
+.topCategoriesList div:hover {
+  transform: scale(1.1);
+}
+.topCategoriesList div p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* ======= TOP CATEGORIES CONTAINER END ======= */
+/* ======= POPULAR CITIES CONTAINER START ======= */
+.popularCitiesContainer {
+  width: 100%;
+  margin-top: 24px;
+}
+.popularCitiesContainer h2 {
+  margin-bottom: 24px;
+  font-size: 2.8rem;
+}
+.popularCitiesContainer p {
+  font-size: 1.6rem;
+  color: #707070;
+}
+
+.popularCitiesList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  flex-wrap: wrap;
+  gap: 42px;
+  margin-top: 28px;
+}
+.popularCitiesList div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  transition: all 0.5s ease;
+}
+.popularCitiesList div:hover {
+  transform: scale(1.1);
+}
+.popularCitiesList div p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ======= POPULAR CITIES CONTAINER END ======= */
+/* ======= HOW MEET WORKS CONTAINER START ======= */
+.howMeetWorksContainer {
+  width: 100%;
+  margin-top: 24px;
+}
+.howMeetWorksContainer h2 {
+  margin-bottom: 24px;
+  font-size: 2.8rem;
+}
+
+.howMeetWorksList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.howMeetWorksList .howMeetWorksSubContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+  width: 580px;
+  border-radius: 8px;
+  padding: 32px 24px;
+  gap: 24px;
+  transition: all 0.5s ease;
+}
+.howMeetWorksList .howMeetWorksSubContainer:hover {
+  transform: scale(1.1);
+}
+.howMeetWorksList .howMeetWorksImgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.howMeetWorksList .howMeetWorksInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  max-width: 380px;
+  gap: 16px;
+}
+.howMeetWorksList .howMeetWorksInfoContainer h4 {
+  font-size: 2rem;
+}
+.howMeetWorksList .howMeetWorksInfoContainer p {
+  font-size: 1.6rem;
+}
+.howMeetWorksList .howMeetWorksInfoContainer a {
+  font-size: 1.6rem;
+  color: #00798a;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.howMeetWorksList .howMeetWorksInfoContainer a:hover {
+  color: #02b5d0;
+}
+
+/* ======= HOW MEET WORKS CONTAINER END ======= */
+/* ======= FRIENDSHIPS MEET CONTAINER START ======= */
+.friendshipsMeetContainer {
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.friendshipsMeetContainer h2 {
+  font-size: 2.8rem;
+}
+.friendshipsMeetContainer p {
+  font-size: 1.6rem;
+  color: #707070;
+  line-height: 24px;
+}
+.friendshipsMeetContainer .friendshipsDesc {
+  max-width: 895px;
+  margin-bottom: 28px;
+}
+
+.friendshipsFeaturesList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  gap: 32px;
+}
+.friendshipsFeaturesList div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  max-width: 376px;
+  gap: 12px;
+  transition: all 0.5s ease;
+}
+.friendshipsFeaturesList div:hover {
+  transform: scale(1.1);
+}
+.friendshipsFeaturesList div img {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.friendshipsFeaturesList div h4 {
+  font-size: 1.8rem;
+  color: #212121;
+}
+.friendshipsFeaturesList div p {
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+.friendshipsFeaturesList div a {
+  margin-top: 4px;
+  font-size: 1.6rem;
+  color: #00798a;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.friendshipsFeaturesList div a:hover {
+  color: #02b5d0;
+}
+
+/* ======= FRIENDSHIPS MEET CONTAINER END ======= */
+/* ================ END OF MAIN ==================== */
+
+/*# sourceMappingURL=mainPageStyle.css.map */

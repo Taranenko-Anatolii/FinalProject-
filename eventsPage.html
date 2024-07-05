@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/media.css"/>
+    <link rel="stylesheet" href="styles/eventsPage/eventsPageStyle.css" />
+    <link rel="stylesheet" href="styles/eventsPage/eventsPageMedia.css" />
+    <!-- Подключение стилей -->
+
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Подключение шрифтов -->
+    <title>Events Page</title>
+  </head>
+  <body>
+  <!--  ================ START OF NAV ====================-->
+  <nav>
+    <div class="logoContainer">
+      <a href="./mainPage.html">
+        <img src="./assets/logo.svg" alt="logo" />
+      </a>
+    </div>
+    <div class="searchContainer">
+      <form class="searchForm" action="">
+        <label class="searchLabel" for="searchInput">
+          <input id="searchInput" name="search" type="search" placeholder="Search events" />
+          <img alt="search_icon" id="searchIcon" src="assets/navbar/search_icon.svg" />
+        </label>
+        <label class="searchCityLabel" for="searchCityInput">
+          <input id="searchCityInput" name="search" type="search" />
+        </label>
+        <button class="searchBtn">
+          <img alt="second_search_icon" src="assets/navbar/second_search_icon.svg" />
+        </button>
+      </form>
+    </div>
+    <div class="rightNavContainer">
+      <button class="switchLangBtn">
+        <img src="assets/navbar/lang_icon.svg" alt="lang_icon" />
+        <span class="text500">English</span>
+      </button>
+      <a class="text500" href="">Log in</a>
+      <button class="signUpBtn text500">Sign up</button>
+    </div>
+  </nav>
+  <!--  ================ END OF NAV ====================-->
+
+  <!--  ================ START OF MAIN ====================-->
+  <main>
+    <!--  ================ START OF EVENTS MAIN ====================-->
+    <section class="eventMainContainer">
+      <div class="eventMainSubContainer">
+          <h1>Events near New York, NY</h1>
+          <div class="eventsHeader2Container">
+            <h2 id="eventsHeader2">Events</h2>
+          </div>
+
+         <div class="eventsFiltersContainer">
+           <form id="selectTypeEvent" class="selectMenu" data-state="">
+             <div class="selectMenuEventTitle" data-default="Option 0">Any type</div>
+             <div class="selectMenuEventContent">
+
+               <input id="selectType0" class="__select__input" type="radio" name="singleSelect" checked />
+               <label for="selectType0" class="__select__label">Any type</label>
+
+               <input id="selectType1" class="__select__input" type="radio" name="singleSelect" checked />
+               <label for="selectType1" class="__select__label">Any type</label>
+
+               <input id="selectType2" class="__select__input" type="radio" name="singleSelect" />
+               <label for="selectType2" class="__select__label">Online</label>
+
+               <input id="selectType3" class="__select__input" type="radio" name="singleSelect" />
+               <label for="selectType3" class="__select__label">Offline</label>
+
+             </div>
+           </form>
+
+           <form id="selectDistanceEvent" class="selectMenu" data-state="">
+             <div class="selectMenuEventTitle" data-default="Option 0">Any distance</div>
+             <div class="selectMenuEventContent">
+
+               <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+               <label for="singleSelect0" class="__select__label">Any distance</label>
+
+               <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" checked />
+               <label for="singleSelect1" class="__select__label">Any distance</label>
+
+               <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+               <label for="singleSelect2" class="__select__label">5 km</label>
+
+               <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+               <label for="singleSelect3" class="__select__label">10 km</label>
+
+               <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+               <label for="singleSelect4" class="__select__label">15 km</label>
+
+               <input id="singleSelect5" class="__select__input" type="radio" name="singleSelect" />
+               <label for="singleSelect5" class="__select__label">25 km</label>
+
+               <input id="singleSelect6" class="__select__input" type="radio" name="singleSelect" />
+               <label for="singleSelect6" class="__select__label">50 km</label>
+
+               <input id="singleSelect7" class="__select__input" type="radio" name="singleSelect" />
+               <label for="singleSelect7" class="__select__label">75 km</label>
+
+               <input id="singleSelect8" class="__select__input" type="radio" name="singleSelect" />
+               <label for="singleSelect8" class="__select__label">100 km</label>
+             </div>
+           </form>
+
+           <form id="selectCategoryEvent" class="selectMenu" data-state="">
+             <div class="selectMenuEventTitle" data-default="Option 0">Any category</div>
+             <div class="selectMenuEventContent">
+
+               <input id="selectCategory0" class="__select__input" type="radio" name="singleSelect" checked />
+               <label for="selectCategory0" class="__select__label">Any category</label>
+
+               <input id="selectCategory1" class="__select__input" type="radio" name="singleSelect" checked />
+               <label for="selectCategory1" class="__select__label">Any category</label>
+
+               <input id="selectCategory2" class="__select__input" type="radio" name="singleSelect" />
+               <label for="selectCategory2" class="__select__label">Social Activities</label>
+
+               <input id="selectCategory3" class="__select__input" type="radio" name="singleSelect" />
+               <label for="selectCategory3" class="__select__label">Hobbies and Passions</label>
+
+               <input id="selectCategory4" class="__select__input" type="radio" name="singleSelect" />
+               <label for="selectCategory4" class="__select__label">Health and Wellbeing</label>
+
+               <input id="selectCategory5" class="__select__input" type="radio" name="singleSelect" />
+               <label for="selectCategory5" class="__select__label">Business</label>
+
+               <input id="selectCategory6" class="__select__input" type="radio" name="singleSelect" />
+               <label for="selectCategory6" class="__select__label">Technology</label>
+
+             </div>
+           </form>
+         </div>
+          <div class="eventsList"></div>
+      </div>
+      <div class="mapContainer">
+          <p>Find events near</p>
+          <h2>New York, NY</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81337.6255934236!2d-74.02238664170113!3d40.74601916466133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sde!4v1719396913397!5m2!1sru!2sde" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <!--  ================ END OF EVENTS MAIN ====================-->
+  </main>
+  <!--  ================ END OF MAIN ====================-->
+
+  <!--  ================ START OF FOOTER ====================-->
+  <footer>
+    <div class="footerInfoContainer">
+      <h4 class="text600">Create your own Meetup group.</h4>
+      <button class="text600">Get Started</button>
+    </div>
+    <div class="footerLinksContainer">
+      <div>
+        <h4>Your Account</h4>
+        <a href="#">Sign up</a>
+        <a href="#">Log in</a>
+        <a href="#">Help</a>
+        <a href="#">Become an Affiliate</a>
+      </div>
+      <div>
+        <h4>Discover</h4>
+        <a href="#">Groups</a>
+        <a href="#">Calendar</a>
+        <a href="#">Topics</a>
+        <a href="#">Cities</a>
+        <a href="#">Online Events</a>
+        <a href="#">Local Guides</a>
+        <a href="#">Make Friends</a>
+      </div>
+      <div>
+        <h4>Meetup</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Meetup Pro</a>
+        <a href="#">Careers</a>
+        <a href="#">Apps</a>
+        <a href="#">Podcast</a>
+      </div>
+    </div>
+
+    <div class="followsLinks">
+      <div class="followContainer">
+        <h4>Follow us</h4>
+        <div class="socialPagesContainer">
+          <a id="facebook_link" href="https://www.facebook.com/" target="_blank">
+            <!--                        <img class="linkIcon" src="assets/footer/facebook_icon.svg" alt="facebook_icon">-->
+            <svg class="linkIcon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 13.076C25.5 6.13101 19.903 0.5 13 0.5C6.09698 0.5 0.5 6.13101 0.5 13.076C0.5 19.3525 5.07043 24.5555 11.0471 25.5V16.7121H7.87238V13.076H11.0471V10.3047C11.0471 7.15315 12.9139 5.41115 15.7686 5.41115C17.1361 5.41115 18.5671 5.65697 18.5671 5.65697V8.75194H16.9902C15.4381 8.75194 14.9529 9.7211 14.9529 10.7168V13.0759H18.4194L17.8656 16.712H14.9529V25.4999C20.9295 24.5571 25.5 19.3542 25.5 13.076Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a id="twitter_link" href="https://www.x.com/" target="_blank">
+            <!--                        <img class="linkIcon" src="assets/footer/twitter_icon.svg" alt="twitter_icon">-->
+            <svg class="linkIcon" width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.5 2.40507C24.5801 2.81301 23.5916 3.08872 22.5541 3.21271C23.6131 2.57791 24.4264 1.57275 24.8094 0.3751C23.8184 0.962825 22.7206 1.38969 21.5524 1.61975C20.6166 0.622925 19.2838 0 17.8085 0C14.9759 0 12.6792 2.29645 12.6792 5.12894C12.6792 5.53093 12.7247 5.9224 12.8121 6.29778C8.5494 6.08389 4.77009 4.04194 2.24037 0.938863C1.79887 1.69639 1.54594 2.57745 1.54594 3.51741C1.54594 5.29682 2.45151 6.86675 3.82775 7.7865C2.98692 7.75988 2.19611 7.52913 1.50451 7.14501C1.50415 7.16641 1.50415 7.1879 1.50415 7.20949C1.50415 9.69462 3.27214 11.7676 5.61851 12.2388C5.18809 12.356 4.73497 12.4186 4.26715 12.4186C3.93666 12.4186 3.61532 12.3865 3.30222 12.3266C3.95486 14.3644 5.84904 15.8472 8.09345 15.8886C6.33809 17.2642 4.1265 18.0842 1.72353 18.0842C1.30956 18.0842 0.901262 18.06 0.5 18.0126C2.76984 19.4679 5.46589 20.317 8.3624 20.317C17.7965 20.317 22.9555 12.5015 22.9555 5.72369C22.9555 5.5013 22.9505 5.2801 22.9406 5.06017C23.9427 4.33702 24.8124 3.43365 25.5 2.40507Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a id="youtube_link" href="https://www.youtube.com/" target="_blank">
+            <!--                        <img class="linkIcon" src="assets/footer/youtube_icon.svg" alt="youtube_icon">-->
+            <svg class="linkIcon" width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 0C0.715 0 0.5 1.0925 0.5 9.625C0.5 18.1575 0.715 19.25 13 19.25C25.285 19.25 25.5 18.1575 25.5 9.625C25.5 1.0925 25.285 0 13 0ZM17.0063 10.0425L11.3938 12.6625C10.9025 12.89 10.5 12.635 10.5 12.0925V7.1575C10.5 6.61625 10.9025 6.36 11.3938 6.5875L17.0063 9.2075C17.4975 9.4375 17.4975 9.8125 17.0063 10.0425Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a id="instagram_link" href="https://www.instagram.com/" target="_blank">
+            <!--                        <img class="linkIcon" src="assets/footer/instagram_icon.svg" alt="instagram_icon">-->
+            <svg class="linkIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1561 16.5454C21.1061 17.6424 20.9226 18.2384 20.7704 18.6343C20.5658 19.1591 20.3216 19.5344 19.9257 19.928C19.5344 20.3216 19.1591 20.5651 18.6343 20.7675C18.2384 20.9221 17.6401 21.1061 16.5432 21.1584C15.3572 21.2106 15.0059 21.2217 11.9986 21.2217C8.9941 21.2217 8.63991 21.2106 7.454 21.1584C6.35708 21.1061 5.76163 20.9221 5.36574 20.7675C4.83813 20.5651 4.46564 20.3216 4.072 19.928C3.67557 19.5344 3.43151 19.1591 3.22969 18.6343C3.07732 18.2384 2.8911 17.6424 2.84381 16.5454C2.78601 15.3595 2.77542 15.0026 2.77542 12.0014C2.77542 8.9941 2.78601 8.63991 2.84381 7.454C2.8911 6.35708 3.07732 5.76162 3.22969 5.3624C3.43151 4.83812 3.67557 4.46505 4.072 4.07141C4.46564 3.67836 4.83813 3.43426 5.36574 3.22969C5.76163 3.07457 6.35708 2.89331 7.454 2.84106C8.63991 2.78878 8.9941 2.77542 11.9986 2.77542C15.0059 2.77542 15.3572 2.78878 16.5432 2.84106C17.6401 2.89331 18.2384 3.07457 18.6343 3.22969C19.1591 3.43426 19.5344 3.67836 19.9257 4.07141C20.3216 4.46505 20.5658 4.83812 20.7704 5.3624C20.9226 5.76162 21.1061 6.35708 21.1561 7.454C21.2113 8.63991 21.2245 8.9941 21.2245 12.0014C21.2245 15.0026 21.2113 15.3595 21.1561 16.5454ZM23.1816 7.36172C23.1266 6.16301 22.9375 5.34406 22.6567 4.63076C22.371 3.89074 21.9879 3.26359 21.3608 2.63645C20.7364 2.01209 20.1092 1.62901 19.3692 1.33991C18.6531 1.06191 17.837 0.870637 16.6378 0.818387C15.4385 0.76055 15.0554 0.75 11.9986 0.75C8.9446 0.75 8.55876 0.76055 7.35951 0.818387C6.16301 0.870637 5.34739 1.06191 4.62796 1.33991C3.89074 1.62901 3.26359 2.01209 2.63924 2.63645C2.01209 3.26359 1.629 3.89074 1.34045 4.63076C1.06245 5.34406 0.873425 6.16301 0.815587 7.36172C0.763337 8.56098 0.75 8.9446 0.75 12.0014C0.75 15.0554 0.763337 15.4385 0.815587 16.6378C0.873425 17.8342 1.06245 18.6526 1.34045 19.3692C1.629 20.1065 2.01209 20.7364 2.63924 21.3608C3.26359 21.9851 3.89074 22.371 4.62796 22.6595C5.34739 22.9375 6.16301 23.1266 7.35951 23.1816C8.55876 23.2366 8.9446 23.25 11.9986 23.25C15.0554 23.25 15.4385 23.2366 16.6378 23.1816C17.837 23.1266 18.6531 22.9375 19.3692 22.6595C20.1092 22.371 20.7364 21.9851 21.3608 21.3608C21.9879 20.7364 22.371 20.1065 22.6567 19.3692C22.9375 18.6526 23.1266 17.8342 23.1816 16.6378C23.2366 15.4385 23.25 15.0554 23.25 12.0014C23.25 8.9446 23.2366 8.56098 23.1816 7.36172ZM19.3559 5.99508C19.3559 5.2473 18.7499 4.6435 18.0049 4.6435C17.2599 4.6435 16.6532 5.2473 16.6532 5.99508C16.6532 6.7401 17.2599 7.3439 18.0049 7.3439C18.7499 7.3439 19.3559 6.7401 19.3559 5.99508ZM8.24907 12.0014C8.24907 14.0712 9.92863 15.7481 11.9986 15.7481C14.0691 15.7481 15.7509 14.0712 15.7509 12.0014C15.7509 9.92812 14.0691 8.2491 11.9986 8.2491C9.92863 8.2491 8.24907 9.92812 8.24907 12.0014ZM6.22365 12.0014C6.22365 8.81061 8.80783 6.22089 11.9986 6.22089C15.1894 6.22089 17.7764 8.81061 17.7764 12.0014C17.7764 15.1894 15.1894 17.7764 11.9986 17.7764C8.80783 17.7764 6.22365 15.1894 6.22365 12.0014Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a id="tiktok_link" href="https://www.tiktok.com/" target="_blank">
+            <!--                        <img class="linkIcon" src="assets/footer/tiktok_icon.svg" alt="tiktok_icon">-->
+            <svg class="linkIcon" width="24" height="24" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.9693 4.13369C12.0929 3.56389 11.4634 2.6495 11.2653 1.58589C11.2219 1.35254 11.1974 1.11649 11.1974 0.875H8.40281L8.39731 12.0729C8.35119 13.3264 7.31744 14.333 6.05306 14.333C5.65969 14.333 5.29063 14.2354 4.96503 14.0644C4.21616 13.671 3.70605 12.8869 3.70605 11.986C3.70605 10.6917 4.75881 9.63625 6.05581 9.63625C6.29731 9.63625 6.53056 9.677 6.74769 9.74475V7.55513V6.89312C6.51981 6.86325 6.28906 6.84163 6.05581 6.84163C3.22038 6.84163 0.914062 9.14787 0.914062 11.9832C0.914062 13.7225 1.78233 15.2636 3.10913 16.1944C3.94483 16.7804 4.9596 17.125 6.05581 17.125C8.89119 17.125 11.1974 14.8187 11.1974 11.9832V6.30433C12.2937 7.09113 13.6368 7.55513 15.0857 7.55513V5.38451V4.76318C14.3042 4.76046 13.5771 4.52982 12.9693 4.13369Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="downloadsStoresContainer">
+        <a href="#">
+          <img src="assets/footer/google_play_img.svg" alt="google_play_img">
+        </a>
+        <a href="#">
+          <img src="assets/footer/app_store_img.svg" alt="app_store_img">
+        </a>
+      </div>
+    </div>
+
+    <div class="footerAdditionInfoContainer">
+      <p>© 2024 Meetup</p>
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Do Not Sell or Share My Personal Data</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Help</a>
+    </div>
+  </footer>
+  <!--  ================ END OF FOOTER ====================-->
+  </body>
+  <!-- Подключение скриптов -->
+  <script type="module" src="scripts/eventsPage/eventsPageIndex.js"></script>
+  <!-- Подключение скриптов -->
+</html>

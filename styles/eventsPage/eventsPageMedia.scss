@@ -1,0 +1,103 @@
+@import "../mixins";
+@import "../constants";
+
+/* ================ START OF ADAPTIVE 768px ==================== */
+@media screen and (max-width: 768px) {
+
+  /* ================ START OF MAIN ==================== */
+  main {
+    padding: 0 15px 0 15px;
+  }
+
+  .eventMainContainer {
+    @include flexBox(column, center, start);
+    flex-wrap: wrap;
+    margin-top: 18px;
+    .eventMainSubContainer {
+      width: $width100;
+    }
+  }
+
+  .eventsList {
+    width: $width100;
+  }
+
+  /* ================ END OF MAIN ==================== */
+
+}
+/* ================ END OF ADAPTIVE 768px ==================== */
+
+/* ================ START OF ADAPTIVE 426px ==================== */
+@media screen and (max-width: 426px) {
+
+  /* ================ START OF MAIN ==================== */
+  .eventsFiltersContainer {
+    padding-bottom: 10px;
+    //overflow-y: auto;
+    overflow-x: scroll;
+  }
+
+
+
+  .mapContainer {
+    display: none;
+  }
+
+  /* ======= EVENTS LIST START ======= */
+  .eventsList {
+
+    .eventContainer {
+      @include flexBox(row, normal, normal);
+      max-height: 400px;
+      margin-top: 16px;
+
+      .eventImage {
+        width: 98px;
+        height: 55px;
+      }
+
+      .eventBadge {
+        display: none;
+      }
+
+      .eventBadge.hidden {
+        display: none;
+      }
+
+      .eventInfoContainer {
+        @include flexBox(column, start, start);
+        max-width: 80%;
+        .eventDateInfo {
+          font-size: 1.0rem;
+        }
+
+        .eventTitleHeader {
+          font-size: 1.0rem;
+        }
+
+        .eventType {
+          display: initial;
+          color: #707070;
+        }
+
+        .eventType:before {
+          content: url("/assets/eventsPage/camera_icon.svg");
+          @include iconInlineAlign(3px);
+        }
+
+        .eventType:after {
+          content: " Event";
+        }
+
+        .eventAttendees {
+          display: none;
+        }
+      }
+    }
+
+  }
+  /* ======= EVENTS LIST END ======= */
+
+  /* ================ END OF MAIN ==================== */
+}
+/* ================ END OF ADAPTIVE 426px ==================== */

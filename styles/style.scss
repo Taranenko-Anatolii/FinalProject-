@@ -1,0 +1,342 @@
+@import "./mixins";
+@import "./universalStyles";
+@import "./constants";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: max-content 1fr 2fr;
+  margin: 0 24px 24px 24px;
+  grid-gap: 40px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer img {
+  transition: transform 0.5s ease;
+}
+
+.logoContainer img:hover {
+  transform: scale(1.1);
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.searchContainer .searchForm {
+  display: flex;
+
+  align-items: center;
+}
+
+#searchInput,
+#searchCityInput {
+  width: 20vw;
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  font-size: 1.6rem;
+  transition: border 0.5s ease;
+}
+
+#searchInput:focus,
+#searchCityInput:focus {
+  border: 1px solid #7c7c7c;
+}
+
+.searchContainer .searchLabel {
+  position: relative;
+}
+
+#searchIcon {
+  padding-left: 10px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.searchContainer .searchBtn {
+  width: 45px;
+  height: 45px;
+  background-color: #f65858;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  transition: background-color 0.5s ease;
+}
+
+.searchContainer .searchBtn:hover {
+  background-color: #fc3030;
+}
+
+.rightNavContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 21px;
+  justify-self: end;
+}
+
+.rightNavContainer .switchLangBtn {
+  display: flex;
+
+  align-items: center;
+  background-color: $whiteBg;
+
+  border: none;
+  gap: 4px;
+
+  font-size: 1.4rem;
+  transition: all 0.5s ease;
+}
+
+.rightNavContainer .switchLangBtn:hover {
+  color: #02b5d0;
+}
+
+.rightNavContainer a {
+  font-size: 1.4rem;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.rightNavContainer a:hover {
+  color: #02b5d0;
+}
+
+.rightNavContainer .signUpBtn {
+  background-color: $aquaBlueBg;
+  padding: 8px 16px;
+  border: none;
+  border-radius: $borderRadius8x;
+
+  font-size: 1.4rem;
+
+  color: $whiteFont;
+  transition: all 0.5s ease;
+}
+
+.rightNavContainer .signUpBtn:hover {
+  background-color: #02b5d0;
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: $darkGrayBg;
+  padding: 35px 195px;
+  margin-top: 40px;
+}
+
+.footerInfoContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+
+  padding-bottom: 25px;
+  border-bottom: 1px solid #707070;
+  gap: 16px;
+}
+
+.footerInfoContainer h4 {
+  font-size: 1.6rem;
+  color: $whiteFont;
+}
+
+.footerInfoContainer button {
+  background-color: transparent;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 2px solid $whiteFont;
+  color: $whiteFont;
+  transition: all 0.5s ease;
+}
+
+.footerInfoContainer button:hover {
+  background-color: $whiteBg;
+  border: 2px solid #575757;
+  transform: scale(1.1);
+  color: #000000;
+}
+
+.footerLinksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  align-items: flex-start;
+
+  margin-top: 24px;
+}
+
+.footerLinksContainer div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  align-items: flex-start;
+  width: 100%;
+
+  gap: 7px;
+}
+
+.footerLinksContainer div h4 {
+  font-size: 1.6rem;
+
+  color: #f6f7f8;
+}
+
+.footerLinksContainer div a {
+  font-size: 1.4rem;
+
+  color: #c5c4c4;
+
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.footerLinksContainer div a:hover {
+  color: #ffffff;
+  text-shadow: #ffffff 0px 0px 2px;
+}
+
+.followsLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+
+  flex-wrap: wrap;
+}
+
+.followsLinks .followContainer {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.followsLinks .followContainer h4 {
+  font-size: 1.6rem;
+
+  color: #f6f7f8;
+}
+
+.followsLinks .socialPagesContainer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+  margin-top: 12px;
+
+  margin-bottom: 24px;
+
+  gap: 35px;
+}
+
+.followsLinks .socialPagesContainer a {
+  transition: all 0.5s ease;
+}
+
+.followsLinks .socialPagesContainer a:hover {
+  transform: scale(1.1);
+}
+
+.followsLinks .socialPagesContainer .linkIcon {
+  transition: color 0.5s ease;
+
+  color: #d9d9d9;
+}
+
+.followsLinks .socialPagesContainer #facebook_link:hover .linkIcon {
+  color: #6fb1f3;
+}
+
+.followsLinks .socialPagesContainer #twitter_link:hover .linkIcon {
+  color: #1dabdd;
+}
+
+.followsLinks .socialPagesContainer #youtube_link:hover .linkIcon {
+  color: #f50d0d;
+}
+
+.followsLinks .socialPagesContainer #instagram_link:hover .linkIcon {
+  color: #833ab4ff;
+}
+
+.followsLinks .socialPagesContainer #tiktok_link:hover .linkIcon {
+  color: #04917d;
+}
+
+.followsLinks .downloadsStoresContainer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.followsLinks .downloadsStoresContainer a {
+  transition: all 0.5s ease;
+}
+
+.followsLinks .downloadsStoresContainer a:hover {
+  transform: scale(1.1);
+}
+
+.footerAdditionInfoContainer {
+  display: flex;
+
+  justify-content: flex-start;
+
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footerAdditionInfoContainer p {
+  font-size: 1.4rem;
+
+  color: $whiteFont;
+}
+
+.footerAdditionInfoContainer a {
+  font-size: 1.4rem;
+
+  color: #c5c4c4;
+
+  text-decoration: none;
+
+  transition: all 0.5s ease;
+}
+
+.footerAdditionInfoContainer a:hover {
+  color: #ffffff;
+
+  text-shadow: #ffffff 0px 0px 2px;
+}

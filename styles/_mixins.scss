@@ -1,0 +1,12 @@
+@mixin flexBox($flexDir: "row", $justifyValue: "normal", $alignValue: "normal") {
+  display: flex;
+  flex-direction: $flexDir;
+  justify-content: $justifyValue;
+  align-items: $alignValue;
+}
+
+@mixin iconInlineAlign($marginRight: 5px) {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: $marginRight;
+}
